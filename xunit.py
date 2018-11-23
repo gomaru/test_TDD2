@@ -4,6 +4,7 @@ class TestCase:
     
     def setUp(self):
         pass
+
     def run(self):
         self.setUp()
         method = getattr(self, self.name)
@@ -20,7 +21,7 @@ class WasRun(TestCase):
 
 
 class TestCaseTest(TestCase):
-    def sefUp(self):
+    def setUp(self):
         self.test = WasRun("testMethod")
 
     def testRunning(self):
